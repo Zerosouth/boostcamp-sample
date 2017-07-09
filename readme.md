@@ -64,7 +64,7 @@ default 값은 사용자 인증정보가 있는 경우만 처리 할 수 있음.
 ```
 
 3. 결과
-<이미지>
+![database](img/database.png)
 
 
 ## Firebase Authentication
@@ -79,9 +79,10 @@ compile 'com.google.firebase:firebase-auth:11.0.2’`
 2. 로그인 방법 설정
 	1. [Firebase 콘솔](https://console.firebase.google.com/) 인증 페이지 진입
 	2. 로그인 방법 탭에서 이메일/비밀번호 로그인 방법을 사용 설정하고 저장 클릭
+	![Authentication](img/authentication.png)
 
 3. 결과
-	<이미지>
+![Authentication](img/authentication2.png)
 
 ## FCM
 
@@ -93,6 +94,7 @@ compile 'com.google.firebase:firebase-messaging:11.0.2'
 ` 추가
 2. Manifest.xml 파일 수정
 	1. 토큰 관리를 위한 FirebaseInstanceIdService를 확장하는 서비스를 추가
+
 	```
 	<service
 	android:name=".MyFirebaseInstanceIDService">
@@ -103,7 +105,6 @@ compile 'com.google.firebase:firebase-messaging:11.0.2'
 	```
 
 	2. FirebaseMessagingService를 확장하는 서비스를 추가.
-
 	```
 	<service
 	android:name=".MyFirebaseMessagingService">
@@ -112,6 +113,13 @@ compile 'com.google.firebase:firebase-messaging:11.0.2'
 	</intent-filter>
 </service>
 	```
+
+3. 결과
+![fcm](img/fcm.png)
+
+
+![fcm](img/device-2017-07-10-001211.png)
+
 
 
 ## 오류보고

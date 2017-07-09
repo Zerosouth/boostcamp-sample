@@ -7,15 +7,17 @@
 
 3. SDK추가
 루트 수준 build.gradle 파일에 규칙을 추가하여 google-services 플러그인을 포함
-```
-buildscript {
-    // ...
-    dependencies {
+
+	```
+    buildscript {
         // ...
-        classpath 'com.google.gms:google-services:3.0.0'
+        dependencies {
+            // ...
+            classpath 'com.google.gms:google-services:3.0.0'
+        }
     }
-}
-```
+    ```
+
 
 	앱 수준 build.gradle 파일에 아래 코드를 추가하여 Gradle 플러그인을 사용 설정 함
 
@@ -54,10 +56,10 @@ default 값은 사용자 인증정보가 있는 경우만 처리 할 수 있음.
 / These rules give anyone, even people who are not users of your app,
 // read and write access to your database
 {
-		"rules": {
-		    ".read": true,
-		    ".write": true
-		}
+	"rules": {
+	    ".read": true,
+	    ".write": true
+	}
 }
 ```
 
@@ -93,22 +95,22 @@ compile 'com.google.firebase:firebase-messaging:11.0.2'
 	1. 토큰 관리를 위한 FirebaseInstanceIdService를 확장하는 서비스를 추가
 	```
 	<service
-			android:name=".MyFirebaseInstanceIDService">
-			<intent-filter>
-				<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-			</intent-filter>
-	</service>
+	android:name=".MyFirebaseInstanceIDService">
+	<intent-filter>
+		<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+	</intent-filter>
+</service>
 	```
 
 	2. FirebaseMessagingService를 확장하는 서비스를 추가.
 
 	```
 	<service
-			android:name=".MyFirebaseMessagingService">
-			<intent-filter>
-				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
-			</intent-filter>
-	</service>
+	android:name=".MyFirebaseMessagingService">
+	<intent-filter>
+		<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+	</intent-filter>
+</service>
 	```
 
 
